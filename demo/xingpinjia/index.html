@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<style>
+	*{margin: 0;padding: 0;list-style: none;}
+	li.l{background: url(img/star1.png) no-repeat 0 0px;float: left;width: 14px;height: 28px}
+	li.r{background: url(img/star1.png) no-repeat -14px 0px;float: left;width: 14px;height: 28px}
+	li.lon{background: url(img/star1.png) no-repeat 0 -28px;float: left;width: 14px;height: 28px}
+	li.ron{background: url(img/star1.png) no-repeat -14px -28px;float: left;width: 14px;height: 28px}
+
+	</style>
+	<link rel="stylesheet" href="">
+	<script>
+	window.onload=function(){
+		var oUl=document.getElementById('ul');
+		var aLi=oUl.getElementsByTagName('li')
+    for (var i = 0; i < aLi.length; i++) {
+    
+   	 if (i%2==0) {
+   	 	aLi[i].className='l';
+   	    }else {aLi[i].className='r'} 
+   		 
+           
+ }
+
+for (var i = 0; i < aLi.length; i++) {
+	aLi[i].index=i;
+	aLi[i].onmouseover=function(){
+		for (var i = 0; i < aLi.length; i++) {
+			
+		
+	if (i%2==0) {
+		if (this.index>=i) {aLi[i].className='lon'}
+        	else{aLi[i].className='l'}
+  
+	} else {
+		if (this.index>=i) {aLi[i].className='ron'}
+        	else{aLi[i].className='r'}
+	}
+}
+
+}
+}
+
+		}
+	</script>
+	
+	
+</head>
+<body>
+<ul id="ul">
+		    <li class='lon'></li>
+			<li class='ron'></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>	
+</ul>
+	
+</body>
+</html>

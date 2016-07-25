@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* 智能社 - www.zhinengshe.com */
+.weather span{color:#fff;}
+.menu a{color:#fff;}
+.bottom a{color: #fff;}
+.bottom p{ color:#fff; }
+
+/*默认皮肤隐藏*/
+.skin_opa,
+.skin_img{ background:url(../img/skin/nvhai.jpg) no-repeat center top;}
+.logo{width:270px; height:130px; background:url(../img/logo_white.png) left top no-repeat; margin:0 auto 10px auto; position:relative;}
+.tab li a {
+	color: #fff;
+	text-decoration:underline;
+}
+.tab .active a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#fff;
+}
+.ui_tool_edit{z-index: 30;position: absolute;width: 100%;background: #333;cursor: pointer;}

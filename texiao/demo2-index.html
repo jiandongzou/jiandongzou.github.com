@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/css.css">
+	<style>
+	*{margin: 0;padding: 0;list-style: none;}
+	#box{margin-left: 500px;margin-top: 200px;position: relative;width: 400px;height: 170px;overflow: hidden}
+	ul{width: 2000px;position: absolute;left:0;top: 0;}
+	
+	ul li{width: 380px;height: 150px;background:green;border: 10px solid #fff;float: left;line-height: 150px;text-align: center;font-size: 30px;position: relative;}
+	
+	ul li img{width: 380px;height: 150px;}
+	ol{width: 450px;height: 20px;position: absolute;bottom:10px;left:16px;}
+	ol li{width: 60px;height:10px;margin: 5px;background:skyblue;float: left;}
+  ol li span{width: 0px;height: 10px;background:#fff;display: block;}
+  .img{position:absolute;left: 50%;top: 0;z-index:-10;width: 1024px;height: 680px;margin-left: -512px;}
+		a{text-decoration: none}
+  
+	</style>
+	
+	
+	
+	
+
+<script src='../move2.js'></script>
+<script>
+	window.onload=function(){
+		var oBox=document.getElementById('box');
+		var oUl=document.getElementById('ul');
+		var aLi=oUl.children;
+		var oOl=document.getElementById('ol');
+		var oLi=oOl.children;
+		var aSpan=document.getElementsByTagName('span');
+      var iNow=0;
+      function next(){
+      	for (var i = 0; i < aSpan.length; i++) {
+      	aSpan[i].style.width=0;
+      }
+        startMove(aSpan[iNow],{width:60},{end:function(){
+        	iNow++;
+        	if (iNow==aSpan.length) {iNow=0} 
+        	 startMove(oUl,{left:-iNow*aLi[0].offsetWidth},{end:next})	
+        }})
+      }
+      next()
+	}
+
+</script>
+</head>
+<body>
+
+	<div id="box">
+		<ul id='ul'>
+			<li><a href="texiao/苹果菜单.html"><img src="img/3.jpg"></a></li>
+			<li><a href="texiao/分页效果.html"><img src="img/4.jpg">分页效果</a></li>
+			<li><a href="texiao/图片播放2.html"><img src="img/5.jpg">图片特效</a></li>
+			<li><a href="texiao/3D图片轮换2/demo4.html"><img src="img/6.jpg">3D图片</a></li>
+			<li><a href="texiao/官网效果/拖拽图片.html"><img src="img/7.jpg">官网效果</a></li>
+		</ul>
+		<ol id='ol'>
+			<li><span></span></li>
+			<li><span></span></li>
+			<li><span></span></li>
+			<li><span></span></li>
+			<li><span></span></li>
+		</ol>
+	
+	</div>
+	<img src="img/2.jpg" alt="" style="display: block;" class='img'>
+
+</body>
+</html>

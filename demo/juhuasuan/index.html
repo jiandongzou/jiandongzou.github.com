@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0"/>
+
+	<title></title>
+	<link rel="stylesheet" href="dist/css/swiper.min.css" />
+
+<style>
+*{margin: 0;padding: 0;list-style:none;}
+a{text-decoration: none}
+.head{width:100%;height:2.5rem;position: relative;background:#f5f5f5;}
+.head span{position: absolute;float: left;background:url(images/f_12.png) no-repeat ;background-size:3.7rem 1rem;width: 3.7rem;height:1rem;left:50%;top:50%;margin-left: -1.85rem;margin-top:-0.5rem ;}
+.head div{float: left;width:3.1rem;height:1.5rem;background:url(images/back.png) no-repeat center center;background-size:100%;margin-top:0.2rem;}
+
+.swiper-container { width: 100%; height: 7.5rem;}
+.swiper-slide {height: 6.0rem;text-align: center; font-size: 18px;  background: #fff;overflow: visible;  display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;-webkit-box-pack: center;
+		 -ms-flex-pack: center;justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+.swiper-slide img{width:100%;height: 6.0rem;}		 
+.product{width: 100%;height:8.65rem;}
+.product li{width:25%;float: left;text-align: center;height:3rem;margin-bottom: 1rem;}
+
+.product li span{font-size: 0.6rem;text-align: center;display: block;}
+.product li img{width:2rem;height:2rem;}
+.hot{width:100%;height:1.25rem;background:url(images/hong.png) left center no-repeat;border-bottom: 4px solid #dcdcdc;margin-top: 0.6rem;}
+.hot p{font-size: 0.7rem;font-weight: bold;margin-left: 0.6rem;float: left;}
+.hot h2{font-size: 0.7rem;font-weight: bold;float: right;margin-right: 0.4rem;}
+.sale{width:100%;height:35rem;margin-top: 0.75rem;}
+.sale ul{width:100%;height:35rem;overflow: hidden;}
+.sale li{width:100%;height:3rem;float: left;overflow: hidden;background:#f4f4f4;margin-bottom: 0.5rem;}
+.sale li div{width:1.5rem;height:3rem;float: left;background:#e00202;text-align: center;line-height:3rem;color:000;font-size: 1.2rem;font-weight: bold;text-align: center;}
+.sale li img{width:4.5rem;height:3rem;float: left;}
+.sale li dl{width:4.5rem;height:3rem;float: left;font-size: 0.6rem;}
+.sale li dl dt{width:4.5rem;margin-left: 0.5rem;padding-top: 0.7rem;}
+.sale li dl dd{width:4.5rem;margin-left: 0.5rem;padding-top: 0.3rem;color:#c7223d;}
+.sale li dl dd em{font-style:normal;color:#999;font-weight: bold;}
+.sale li dl dd em strong{font-style:normal;color:#999;font-weight: bold;text-decoration:line-through;}
+.sale li i{width:5.5rem;height:3rem;float: right;background:url(images/jiant.png) 3.75rem center no-repeat;background-size: 0.3rem 0.5rem;overflow: hidden;}
+.sale li i span{width:3rem;height:3rem;float: right;font-size: 0.8rem;line-height:3rem; color:#d51938;font-style:normal;background-size: 0.3rem 0.5rem;margin-right: 1.25rem;}
+.cheap{width:100%;height:2rem;background: #f4f4f4;}
+.cheap span{display:block;line-height: 2rem;text-align: center;font-size: 0.7rem;font-weight:bold;background:#f4f4f4;background: url(images/jiant.png) 14.175rem center no-repeat;background-size:0.3rem 0.5rem; }
+.shoptuan{width:100%;height:9.25rem;overflow:hidden;font-size: 0.7rem;margin: 0.5rem 0;display: flex;}
+.shoptuan div{width:3.75rem;height:8.75rem;background:url(images/f_79.png) no-repeat;background-size: 3.75rem 8.75rem;float:left;}
+.lifetuan div{width:3.75rem;height:8.75rem;background:url(images/f_86.png) no-repeat;background-size: 3.75rem 8.75rem;float:left;}
+.pinpaituan div{width:3.75rem;height:8.75rem;background:url(images/f_96.png) no-repeat;background-size: 3.75rem 8.75rem;float:left;}
+/*.shoptuan ul{width:12.25rem;height:8.75rem;float: right;box-sizing: border-box;overflow: hidden;}
+.shoptuan ul li{width:calc((100%/3);height:2.15rem;float: left;border-bottom:1px solid #eee;text-align: center;}
+		*/
+.shoptuan table{ border-collapse:collapse;width:12.25rem;height:8.75rem;-webkit-box-flex: 1;float: left;font-size: 0.7rem;color:#b4b4b4；}
+
+.shoptuan td,.shoptuan th{border:1px solid #eee;width:calc(100%/3);height:calc(8.70rem/4);text-align:center;}
+}
+
+.app {height:4rem;width:100%;margin-bottom: 0.5rem;}
+.app ul{width: calc(:100%/3);height:4rem;overflow: hidden;margin: 0 0.5rem;}
+.app li{float: left;height:4rem;width:calc(100%/3);height:4rem;}
+.app li img{width: 5rem;height:4rem;}
+.log{width:100%;height:2.25rem;background: #f8f8f8;margin-top: 0.5rem;}
+.log ul{width:100%;height:2.25rem;}
+.log li{float: left;font-size: 0.7rem;line-height:2.25rem;}
+.log li:first-child{margin-left: 0.75rem;}
+.log li:nth-child(2){margin-left: 1rem;}
+.log li:nth-child(3){float:left;margin-left: 8.4rem;}
+.log li:nth-child(4){width:0.4rem;height:0.2rem;float: left;background:url(images/shang.png) no-repeat;background-size:0.4rem 0.2rem;margin-top:1rem;margin-left: 0.5rem;}
+ .foot{width:100%;height:3.65rem;background:#eee;}
+ .foot h2{width:100%;padding-top:1.05rem;font-size: 0.7rem;text-align: center;line-height:0.7rem }
+ .foot h2 a{color:#333;}
+ .foot p{width:100%;padding-top:0.8rem;font-size: 0.55rem;text-align: center;color:#999;line-height:0.55rem }
+
+      
+        
+        
+        
+        
+      
+       
+       
+       
+        
+       
+       
+        
+       
+       
+       
+       
+   
+</style>
+<script src="dist/js/swiper.min.js"></script>
+    
+<script >
+  	window.onload=function(){
+
+		(function(){
+			function Font(){
+				var font=document.documentElement.clientWidth/(320/20);
+			document.documentElement.style.fontSize=font+'px';
+
+			}
+		 Font()
+			window.addEventListener('onresize',Font,false);
+		})();
+			var swiper = new Swiper('.swiper-container',{
+			pagination: '.swiper-pagination',
+			paginationClickable: true
+		});
+
+		}
+
+ </script>
+      
+</head>
+
+<body>
+ <div class="head">
+    <div></div>
+    <span></span>
+ </div>		
+ <!-- <div class="navp">
+ 	<div>
+ 		<img src="images/f_16.png" alt="">
+ 	</div> -->
+
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:#F03;"><img src="images/f_16.png" alt=""></div>
+            <div class="swiper-slide" style="background:#0F3;">Slide 2</div>
+            <div class="swiper-slide" style="background:#34F;">Slide 3</div>
+            <div class="swiper-slide" style="background:#0F0;">Slide 4</div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+ 	
+ <div class="product">
+ 		<ul>
+ 			<li><img src="images/f_24.png" alt=""><span>商品</span></li>
+ 			<li><img src="images/f_26.png" alt=""><span>生活</span></li>
+ 			<li><img src="images/f_28.png" alt=""><span>品牌</span></li>
+ 			<li><img src="images/f_30.png" alt=""><span>聚宝盆</span></li>
+ 			<li><img src="images/f_39.png" alt=""><span>聚名品</span></li>
+ 			<li><img src="images/f_40.png" alt=""><span>聚家装</span></li>
+ 			<li><img src="images/f_41.png" alt=""><span>聚透</span></li>
+ 			<li><img src="images/f_42.png" alt=""><span>客户端</span></li>
+ 		</ul>
+ </div>	
+<div class="hot">
+	<p>聚划算热卖排行</p>
+	 <h2>TOP10</h2>
+</div>
+<div class="sale">
+	<ul>
+		<li>
+			<div>1</div>
+			<img src="images/f_48.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>2</div>
+			<img src="images/f_51.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>3</div>
+			<img src="images/f_53.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>4</div>
+			<img src="images/f_55.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>5</div>
+			<img src="images/f_57.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>6</div>
+			<img src="images/f_60.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>7</div>
+			<img src="images/f_66.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>8</div>
+			<img src="images/f_74.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>9</div>
+			<img src="images/f_72.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		<li>
+			<div>10</div>
+			<img src="images/f_76.png" alt="">	
+			 <dl>
+			 	<dt>已售63428件</dt>
+			 	<dd>2.3<em>折  ￥<strong>299</strong></em></dd>
+			 </dl>
+            <i><span>￥51</span></i>  
+		</li>
+		
+	</ul>
+</div>
+
+<div class="cheap">
+	<span>更多划算  逛起来!</span>
+	
+</div>
+<div class="shoptuan">
+	<div></div>
+	
+	
+	<table>
+    	<thead>
+        	<tr>
+            	<th >服饰</th>
+                <th >配饰</th>
+                <th >美妆</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            	<td >鞋包</td>
+                <td >食品</td>
+                <td >家居</td>
+            </tr>
+            <tr>
+            	<td>运动</td>
+                <td >电器</td>
+                <td >百货</td>
+            </tr>
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td>母婴</td>
+                <td >数码</td>
+                <td >更多</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+<div class="cheap">
+	<span>精彩商品  逛起来!</span>
+</div>
+<div class="lifetuan shoptuan">
+	<div></div>
+	
+	
+	<table>
+    	<thead>
+        	<tr>
+            	<th >美食</th>
+                <th >教育</th>
+                <th >酒店</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            	<td >电影</td>
+                <td >生活服务</td>
+                <td >卡劵</td>
+            </tr>
+            <td>摄影</td>
+                <td >粮油生鲜</td>
+                <td> 门票</td>
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td>休闲娱乐</td>
+                <td ></td>
+                <td ></td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+<div class="cheap">
+<span>	品质生活  逛起来!</span>
+</div>
+<div class="pinpaituan shoptuan">
+	<div></div>
+	
+	
+	<table>
+    	<thead>
+        	<tr>
+            	<th >七匹狼</th>
+                <th >粉红女...</th>
+                <th >卓诗尼</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            	<td >收纳博士</td>
+                <td >惠氏</td>
+                <td >夏乐</td>
+            </tr>
+            <td>帕克伦</td>
+                <td >古今</td>
+                <td> 九牧</td>
+        </tbody>
+        <tfoot>
+        	<tr>
+            	<td>诺奥</td>
+                <td >红豆</td>
+                <td >曼秀雷敦</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+<div class="cheap">
+	<span>品牌折扣  逛起来!</span>
+</div>
+<div class="app">
+	<ul>
+		<li><img src="images/f_107.png" alt=""></li>
+		<li><img src="images/f_108.png" alt=""></li>
+		<li><img src="images/f_109.png" alt=""></li>
+	</ul>
+</div>
+<div class="log">
+	<ul>
+		<li>登录</li>
+		<li>注册</li>
+		<li>TOP</li>
+		<li></li>
+          
+	</ul>
+</div>
+<div class="foot">
+	<h2><a href="#">标准版</a> <a href="#">电脑版</a></h2>
+	<p>©2013 浙B2-20080224   服务中心</p>
+</div>
+</body>
+</html>
