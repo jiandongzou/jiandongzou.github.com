@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 				initHijacking();
 				$(window).on('DOMMouseScroll mousewheel', scrollHijacking);
 			} else {
-				scrollAnimation();
+				  scrollAnimation();
 				$(window).on('scroll', scrollAnimation);
 			}
 			prevArrow.on('click', prevSection);
@@ -652,7 +652,7 @@ function lt(){
 		var arr2=['texiao/官网效果/拖拽图片.html','texiao/苹果菜单.html','"texiao/图片播放2.html','texiao/demo2-index.html','texiao/3D图片轮换2/demo4.html','texiao/分页效果.html']
 		for(var i=0; i<N;i++){
 			var oLi=document.createElement('li');
-			oLi.style.backgroundImage='url(img/_'+(i+1)+'.jpg)';
+			oLi.style.backgroundImage='url(img/a'+(i+1)+'.jpg)';
 			oLi.innerHTML='<a href="'+arr2[i]+'" target="_blank"><span>'+arr[i]+'</span></a>';
 			
 			oBox.appendChild(oLi);
