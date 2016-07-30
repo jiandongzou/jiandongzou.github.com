@@ -647,19 +647,18 @@ function lt(){
 
 	   var oBox=document.querySelector('.box');
 
-		var arr=['运动特效之官网效果','运动特效之苹果菜单','运动特效之图片特效','运动特效之幻灯片','运动特效之3d图片特效','运动特效之分页'];
+		
 		var N=6;
-		var arr2=['texiao/官网效果/拖拽图片.html','texiao/苹果菜单.html','"texiao/图片播放2.html','texiao/demo2-index.html','texiao/3D图片轮换2/demo4.html','texiao/分页效果.html']
+		
 		for(var i=0; i<N;i++){
 			var oLi=document.createElement('li');
 			oLi.style.backgroundImage='url(img/a'+(i+1)+'.jpg)';
-			oLi.innerHTML='<a href="'+arr2[i]+'" target="_blank"><span>'+arr[i]+'</span></a>';
+			
 			
 			oBox.appendChild(oLi);
 		}
 		
 		var aLi=oBox.children;
-		var oA=oBox.getElementsByTagName('a');
 		
 		for(var i=0; i<aLi.length;i++){
 			
@@ -726,7 +725,7 @@ function lt(){
 				
 				var scale= Math.abs(Math.abs((360/N*i+y)%360)-180)/180;
 				
-				console.log(scale);
+				
 				scale<0.4 && (scale=0.4);
 				aLi[i].style.opacity=scale;
 			}	
@@ -734,3 +733,59 @@ function lt(){
 
 }
 lt();
+function lunbo(){
+	 var oBox=document.getElementById('box');
+            var oUl=oBox.children[0];
+            var oOl=oBox.children[1];
+            var aBtn=oOl.children;
+            var oR=document.getElementById('oR');
+            var oL=document.getElementById('oL')
+            var cnow=0;
+            for(var i=0;i<aBtn.length;i++){
+                     aBtn[i].index=i;
+                     aBtn[i].onclick=function(){
+                     	  cnow=this.index;
+                        tab();
+
+                }
+          }
+           function tab(){
+           	for(var i=0;i<aBtn.length;i++){
+                            aBtn[i].className='';
+                        }
+                        aBtn[cnow].className='now';
+                        
+                        startMove(oUl,{left:-cnow*(oBox.offsetWidth)});
+//                        oUl.style.left=-index*(oBox.offsetWidth-2)+'px';
+                  
+           }
+          oL.onclick=function(){
+           	toright();
+           }
+            oR.onclick=function(){
+           	toleft();
+           }
+       function toright(){
+       	 cnow++;
+       	 if (cnow==aBtn.length) {cnow=0}
+       	 	tab();
+       }
+       function toleft(){
+       	cnow--;
+       		 if (cnow==-1) {cnow=aBtn.length-1}
+       		 	tab()
+       }
+  
+  oBox.onmouseover=function(){
+
+  		oR.style.display="block";
+  		oL.style.display="block";
+  }
+
+  oBox.onmouseout=function(){
+  	oR.style.display="none";
+  	oL.style.display="none";
+  }
+  
+}
+lunbo()

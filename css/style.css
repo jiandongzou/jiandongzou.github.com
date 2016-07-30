@@ -127,7 +127,8 @@ a {
     padding-left: 3em;
     padding-top: 0;
 }
-
+.nav ul li{float: left;margin-left: 2.5em;}
+.nav ul li:nth-child(2){margin-left: -6em}
 
 .aboutme{
     height: 10em;
@@ -154,15 +155,15 @@ section.message2{
     position: relative;
 }
 section.message2 div.img{
-    height: 16em;
-    width: 16em;
+    height: 14em;
+    width: 14em;
     border-radius: 50%;
     margin: 2.8em 1em 1em 3em;
-    background:  url(http://7xonct.com1.z0.glb.clouddn.com/CV%2Fhello.jpg) no-repeat 15px 16px;
+    background: url(../img/me.png) no-repeat 15px 16px;
     background-size: 14em;
     background-position: bottom;
     border: 0.6em solid rgba(225,225,225, .3);
-    
+   
 }
 section.message2 dl{
     margin-top: -1em;
@@ -215,7 +216,7 @@ section.message2 div.img:hover,
 }   
 .message2 dl{
     display: inline-block;
-    width: 30em;
+    width: 31em;
     height: auto;
     position: absolute;
     right: 18em;
@@ -614,7 +615,7 @@ div.skills{
   -webkit-transform-origin: 0 100%;
       -ms-transform-origin: 0 100%;
           transform-origin: 0 100%;
-  background-image: url("http://7xonct.com1.z0.glb.clouddn.com/CV/dasheng.jpg");
+  background-image: url(../img/dasheng.jpg);
   background-position: right;
 }
 
@@ -641,7 +642,7 @@ div.skills{
 .top .photo{
     width: 100%;
     height: 80%;
-    background-image: url(http://7xonct.com1.z0.glb.clouddn.com/CV/designer&coder.png);
+    background-image: url(../img/sikao.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30em;
@@ -895,4 +896,15 @@ div.skills{
 .icon-tag:before {
   content: "\e91f";
 }
+ #box ul{ position:absolute; left:0; top:0; width:4200px;background:skyblue;}
+        #box{ overflow:hidden; width:700px; height:300px; position:relative; margin:100px auto;}
+        #box ul li{ float:left; width:700px; height:300px; text-align:center; font-size:20px; color:#fff; font-family:"微软雅黑";}
+        #box ol{ position:absolute; left:50%; bottom:5px;margin-left: -60px;}
+        #box ol li{ cursor:pointer; font-size:16px; font-family:"微软雅黑"; text-align:center; line-height:20px; float:left; width:20px; height:20px; background:silver; margin:5px;border-radius: 50%}
+        #box ol li.now{ background:yellowgreen; color:#ccc;}
+ #box ul li span{float: left;width: 300px;height: 300px;margin-top: 80px;}
+#box ul li i{float:right;width: 200px;height: 200px;margin-top: 50px;margin-right: 30px;}
+ #box .right{height: 80px;width: 40px;background:red;position: absolute;left:0px;z-index:2;top:110px;opacity:0.3;filter: alpha(opacity:30);display:none}
+ #box .left{height: 80px;width: 40px;background:red;position: absolute;right:0px;opacity:0.3;filter: alpha(opacity:30);z-index:2;top:110px;display:none}
+
 
