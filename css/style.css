@@ -896,15 +896,32 @@ div.skills{
 .icon-tag:before {
   content: "\e91f";
 }
- #box ul{ position:absolute; left:0; top:0; width:4200px;background:skyblue;}
-        #box{ overflow:hidden; width:700px; height:300px; position:relative; margin:100px auto;}
-        #box ul li{ float:left; width:700px; height:300px; text-align:center; font-size:20px; color:#fff; font-family:"微软雅黑";}
-        #box ol{ position:absolute; left:50%; bottom:5px;margin-left: -60px;}
-        #box ol li{ cursor:pointer; font-size:16px; font-family:"微软雅黑"; text-align:center; line-height:20px; float:left; width:20px; height:20px; background:silver; margin:5px;border-radius: 50%}
-        #box ol li.now{ background:yellowgreen; color:#ccc;}
- #box ul li span{float: left;width: 300px;height: 300px;margin-top: 80px;}
-#box ul li i{float:right;width: 200px;height: 200px;margin-top: 50px;margin-right: 30px;}
- #box .right{height: 80px;width: 40px;background:red;position: absolute;left:0px;z-index:2;top:110px;opacity:0.3;filter: alpha(opacity:30);display:none}
- #box .left{height: 80px;width: 40px;background:red;position: absolute;right:0px;opacity:0.3;filter: alpha(opacity:30);z-index:2;top:110px;display:none}
+/* .flexslider ul{ position:absolute; left:0; top:0; width:4200px;background:skyblue;}
+     
+ .flexslider .right{height: 80px;width: 40px;background:red;position: absolute;left:0px;z-index:2;top:110px;opacity:0.3;filter: alpha(opacity:30);display:none}
+.flexslider .left{height: 80px;width: 40px;background:red;position: absolute;right:0px;opacity:0.3;filter: alpha(opacity:30);z-index:2;top:110px;display:none}
+ */
 
-
+a,img{border:0;}
+/* body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";} */
+/* flexslider */
+.flexslider{margin:40px auto;position:relative;width:960px;height:450px;overflow:hidden;zoom:1;background:#ccd;}
+.flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.flexslider .slides{zoom:1;}
+.flex-direction-nav a{width:60px;height:90px;line-height:99em;overflow:hidden;margin:-60px 0 0;display:block;background:url(../images/ad_ctr.png) no-repeat;position:absolute;top:50%;z-index:10;cursor:pointer;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
+.flex-direction-nav .flex-next{background-position:0 -90px;right:0;}
+.flex-direction-nav .flex-prev{left:0;}
+.flexslider:hover .flex-next{opacity:0.8;filter:alpha(opacity=25);}
+.flexslider:hover .flex-prev{opacity:0.8;filter:alpha(opacity=25);}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:1;filter:alpha(opacity=50);}
+.flex-control-nav{width:100%;position:absolute;bottom:10px;text-align:center;}
+.flex-control-nav li{margin:0 5px;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{background:url(../images/dot.png) no-repeat 0 -16px;display:block;height:16px;overflow:hidden;text-indent:-99em;width:16px;cursor:pointer;}
+.flex-control-paging li a.flex-active{background-position:0 0;}
+ .flexslider{ overflow:hidden; width:700px; height:300px; position:relative; margin:100px auto;}
+        .flexslider ul li{ float:left; width:700px; height:300px; text-align:center; font-size:20px; color:#fff; font-family:"微软雅黑";}
+    /*    .flexslider ol{ position:absolute; left:50%; bottom:5px;margin-left: -60px;}
+    .flexslider ol li{ cursor:pointer; font-size:16px; font-family:"微软雅黑"; text-align:center; line-height:20px; float:left; width:20px; height:20px; background:silver; margin:5px;border-radius: 50%}
+          */
+ .flexslider ul li span{float: left;width: 300px;height: 300px;margin-top: 80px;}
+.flexslider ul li i{float:right;width: 200px;height: 200px;margin-top: 50px;margin-right: 30px;}

@@ -6,8 +6,8 @@
     <title>Title</title>
     <style>
         *{ margin:0; padding:0; list-style:none;}
-        #box{ width:700px; height:400px; position:relative; margin:100px auto; background:url(img/_0.jpg) no-repeat;}
-        #box span{ width:100px; height:100px; background:url(img/_1.jpg) no-repeat; position:absolute; opacity:0; filter:alpha(opacity:0);}
+        #box{ width:700px; height:400px; position:relative; margin:100px auto; background:url(img/c0.jpg) no-repeat;}
+        #box span{ width:100px; height:100px; background:url(img/c1.jpg) no-repeat; position:absolute; opacity:0; filter:alpha(opacity:0);}
         input{margin: 50px auto;display: block;}
     </style>
     <script src="move.js">
@@ -48,7 +48,7 @@
                             setTimeout(function(){
                                 aSpan[index].style.opacity=0;
                                 aSpan[index].style.filter='alpha(opacity:0)';
-                                aSpan[index].style.backgroundImage='url(img/_'+iNow%3+'.jpg)';
+                                aSpan[index].style.backgroundImage='url(img/c'+iNow%3+'.jpg)';
                                 startMove(aSpan[index],{opacity:1});
 
                                 if(index==27)bSys=true;

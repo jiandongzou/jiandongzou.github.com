@@ -118,7 +118,7 @@
         <div><a href="web/mls/index.html" target="_blank"><img src="img/mls.gif" alt=""></a><span><a href="web/mls/index.html" target="_blank"><img src="img/mls.gif" alt=""></a></span></div>
         <div><a href="web/lhhx/index.html" target="_blank"><img src="img/lhhx.jpg" alt=""></a><span><a href="web/lhhx/index.html" target="_blank"><img src="img/lhhx.jpg" alt=""></a></span></div>
         <div><a href="web/aiqiyi/index.html" target="_blank"><img src="img/aqy.png" alt=""></a><span><a href="web/aiqiyi/index.html" target="_blank"><img src="img/aqy.png" alt=""></a></span></div>
-        <div><a href="demo/juhuasuan/index.html" target="_blank"><img src="img/aa.png" alt=""></a><span><a href="demo/juhuasuan/index.html" target="_blank"><img src="img/aa.png" alt="" target="_blank"></a></span></div>
+        <div><a href="demo/yd/yidong.html" target="_blank"><img src="img/aa.png" alt=""></a><span><a href="demo/yd/yidong.html" target="_blank"><img src="img/aa.png" alt="" target="_blank"></a></span></div>
         <div><a href="demo-index.html" target="_blank"><img src="img/dm.jpg" alt=""></a><span><a href="demo-index.html" target="_blank"><img src="img/dm.jpg" alt=""></a></span></div>
        
     </ul>
@@ -128,14 +128,13 @@
 		</div>
 	</section>
   <section class="cd-section" style="background:lightblue">
-      <div class="container project">
+  <div class="container project">
      <h1><span class="icon-happy"></span> 我的特效</h1>
-       <div id="box">
+      
+<div id="demo01" class="flexslider">
 
-          
-        
-        <ul>
-            <li>
+  <ul class="slides">
+ <li>
             <span>
                <dl>
                       <dt>运动特效之官网效果</dt>
@@ -211,17 +210,7 @@
       <i><img src="img/f.jpg" alt=""></i>
        </a>
               </li>
-        </ul>
-        <ol>
-            <li class="now">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-        </ol>
-        <div class="right" id="oR"></div>
-        <div class="left" id="oL"></div>
+
     </div>
 
   </div>
@@ -286,21 +275,18 @@
                    <span class="text code">&lt; coder &gt; </span>
                </div>
                <div class="bottom">
-<<<<<<< 5801534d9b393e1a82094df6fa46d6e3b9067c77
-                   <h1>想要了解我更多 <span class="icon-point-down"></span></h1>                          <a href="https://jiandongzou.github.io/" target="_blank">博客 </a>|
-=======
-                   <h1>想要了解我更多 <span class="icon-point-down"></span></h1>                          <a href="http://#" target="_blank">博客 </a>|
->>>>>>> log
+
+                   <h1>想要了解我更多 <span class="icon-point-down"></span></h1>                          <a href="https://avascript:;" target="_blank">博客 </a>|
+
                   
                    <a href="https://jiandongzou.github.io/" target="_blank">Github </a>|
                    <a href="https://www.zhihu.com/people/dong-tian-xia-mo" target="_blank">知乎 </a>|
-<<<<<<< 5801534d9b393e1a82094df6fa46d6e3b9067c77
+
                    <a href="zjd19911228@163.com" title="zjd19911228@163.com" target="_blank">邮箱 </a>
-                   <h1><a href="https://github.com/momeakl/CV"  target="_blank" title="记得给我点个star哟">下载简历</a></h1>
-=======
-                   <a href="#" title="zoujiandongemail@163.com" target="_blank">邮箱 </a>
                    <h1><a href="javascript:;"  target="_blank" title="记得给我点个star哟">下载简历</a></h1>
->>>>>>> log
+
+                  
+
                </div>
            </div>
 		</div>
@@ -318,6 +304,7 @@
 	   <script src="js/velocity.min.js"></script>
 	<script src="js/main.js"></script> <!-- Resource jQuery -->
 	<script src="js/jquery.AshAlom.gaugeMeter.js"></script>
+  <script src="js/slider.js"></script>
 	<script>
         $(document).ready(function(){
           $(".GaugeMeter").gaugeMeter();
@@ -327,6 +314,17 @@
 		            opacity: 'toggle'
 		        }, 300);
 		    });
+
+          $('#demo01').flexslider({
+
+    animation: "slide",
+
+    direction:"horizontal",
+
+    easing:"swing"
+
+  });
+
         });
     </script>
 </body>

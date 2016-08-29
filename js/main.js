@@ -755,8 +755,8 @@ function lunbo(){
                         }
                         aBtn[cnow].className='now';
                         
-                        startMove(oUl,{left:-cnow*(oBox.offsetWidth)});
-//                        oUl.style.left=-index*(oBox.offsetWidth-2)+'px';
+                      /*  startMove(oUl,{left:-cnow*(oBox.offsetWidth)});*/
+                      oUl.style.left=-cnow*(oBox.offsetWidth-2)+'px';
                   
            }
           oL.onclick=function(){
