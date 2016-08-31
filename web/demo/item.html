@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fancybox</title>
+  <link rel="stylesheet" href="css/fancybox.css">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/fancybox.js"></script>
+</head>
+<body>
+ <h2>我的项目</h2>
+  <div id="box">
+    <img data-role="fancybox" data-link="http://jzyyc.uheoo.com/" data-caption="关于传统制作工艺的旗袍购物网站,主要职责是对购物网站的布局，并进行随时更新维护,并做好交互和存储" data-source="images/jzyy.png" src="images/jzyy.png" width="200px" height="200px">
+    <img data-role="fancybox" data-link="http://www.vipiao.com" data-caption="一款致力于成为中国最可信票务交易的平台，主要职责是通过该项目熟练运用HTML、CSS方式进行页面布局，处理浏览器一些兼容问题，与后台合作，解决交互问题，熟悉运用测试方法解决Bug问题。" data-source="images/vp.png" src="images/vp.png" width="200px" height="200px">
+    <img data-role="fancybox" data-link="http://www.weqia.com/" data-caption="一款关于企业社交化的交流平台。主要职责是首页运用DIV+CSS进行布局、jQuery实现效果。登录和注册页面使用RegExp进行校验。公司管理界面运用jsonp进行数据交互。对平台的web页面进行性能优化以及特性开发" data-source="images/wq.png" src="images/wq.png" width="200px" height="200px">
+     <img data-role="fancybox" data-link="http://29ed80.xinyali.net/" data-caption="牙康咨询，牙康产品，牙康资讯等内容于一体的移动端牙科平台。主要职责是用HTML5+CSS3进行手机端网站页面开发，运用meta标签，使用百分比布局， 再与相对单位rem结合进行页面布局，使用zepto框架开发页面效果。" data-source="images/yk.png" src="images/yk.png" width="200px" height="200px">
+  </div>
+
+
+
+
+<!-- DOM结构 模板
+  <div class="fancy-mask"></div>
+  <div class="fancy-popup">
+    <div class="fancy-pic-area">
+      <a href="#"><img src="images/3.jpg" alt=""></a>
+      <a href="javascript:;" class="close-btn">X</a>
+    </div>
+    <div class="fancy-text-area">
+      <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sequi esse similique, aspernatur dolorum sit qui.</span><a href="#">MORE >></a></p>  
+    </div>
+  </div> -->
+
+  <!-- SCRIPT -->
+  <script>
+    var fancybox = new Fancybox();
+
+    fancybox.config({
+      width:1000,
+      top: 50,
+      hasCloseBtn: true,
+      openInBlank: true
+    });
+
+    fancybox.init();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.fancy-mask {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  display: none;
+}
+body{background:lightgreen;}
+h2{margin: 50px auto;text-align: center}
+
+#box{width:1000px;height: 150px;margin:150px auto;}
+#box img{float: left;margin-right: 50px;}
+.fancy-popup {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  border: 5px solid  #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,.4);
+  display: none;
+}
+
+.fancy-popup img {
+  display: block;
+  width: 100%;
+}
+
+.fancy-popup p {
+  margin: 0;
+  position: absolute;
+  bottom: 0; left: 0;
+  line-height: 1.2em;
+  padding: 10px;
+  color: hsl(0,0%,90%);
+  background-color: rgba(0,0,0,.4);
+  overflow: hidden;
+}
+
+.fancy-popup p a {
+  color: #fefefe;
+  margin-left: 10px;
+  line-height: 1.2em;
+  text-shadow: 0 0 3px #000;
+}
+
+.fancy-pic-area .close-btn {
+  position: absolute;
+  font-family: "Microsoft Yahei";
+  font-size: 12px;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 2px solid  #fff;
+  border-radius: 50%;
+  background-color: #424b50;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}

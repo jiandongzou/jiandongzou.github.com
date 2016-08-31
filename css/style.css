@@ -501,10 +501,11 @@ div.skills{
 /*zuopin end*/
 .art{width:100%;height: 500px;margin: 0px auto;position: relative;} 
      .art img{position: absolute;left:0px; top: 0;width:100%;height: 500px;}
-       .art #oUl{ width:850px;height: 400px; margin:0 auto; position:relative;}
+       .art #oUl{ width:850px;height:800px; margin:0 auto; position:relative;}
         .art #oUl div{ overflow:hidden; width:200px; height:200px;  position:relative; text-align:center; line-height:200px; font-size:30px; color:#fff; float:left; margin-left: 80px;margin-top: 50px;}
          .art #oUl div span{ width:200px; height:200px;  opacity:1; filter:alpha(opacity:100); position:absolute; left:-200px; top:0;}
           .art #oUl div img{width:200px; height:200px;}
+          .art #oUl div a img{opacity:.8;filter:alpha(opacity:80);}
   ul.box{ width:133px; height:200px; position:absolute; top:50%; left:50%; margin-top:-200px; margin-left:-66px; transform-style:preserve-3d; transform:rotateX(-15deg);}
   .box li{ width:133px; height:200px; background:url(img/1.jpg); transition:1s all ease; position:absolute; box-shadow:0 0 20px #FFF;-webkit-box-reflect:below 20px -webkit-linear-gradient(bottom,rgba(0,0,0,0.2),rgba(0,0,0,0) 20%)}
     .box li span{font-size: 14px;width:133px; height:200px;text-align:top;display: block}
