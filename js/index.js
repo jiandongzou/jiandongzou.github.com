@@ -80,7 +80,7 @@ $(function(){
 		console.log(w_height +"/" +v_height +"/" +padding_top_num);
 		var padding_top = "padding-top:" + padding_top_num + "px"; 
 		$container.attr('style',padding_top);
-		console.log('暂不支持低版本IE，后续更新！--From Apollozz')
+		console.log('暂不支持低版本IE，后续更新！--From 邹建东')
 	}
 	tvMiddle();
 

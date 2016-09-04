@@ -12,12 +12,9 @@
    <script src="js/move2.js"></script>
    <script>
    window.onload=function(){
-
-        var oA=document.querySelector('audio');
-		var oBtn=document.querySelector('.playmusic');
-		var isPlay=false;
-        var browser=navigator.appName 
-        var b_version=navigator.appVersion 
+           if( navigator.userAgent.indexOf("MSIE") !=-1) { 
+         var browser=navigator.appName;
+        var b_version=navigator.appVersion ;
         var version=b_version.split(";"); 
         var trim_Version=version[1].replace(/[ ]/g,""); 
         if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
@@ -36,9 +33,20 @@
         { 
         alert('此网站暂不支持低版本浏览器，建议使用IE10以上版本或Firefox、Chrome等高级浏览器浏览!'); 
         } 
+   } 
+
+	   
+	
+	
+          
+       
+        var oA=document.querySelector('audio');
+		var oBtn=document.querySelector('.playmusic');
+		var isPlay=false;
         var i=0;
         
 		oBtn.onclick=function(){
+		
 			if(isPlay){
 				oA.pause();
 			
@@ -52,7 +60,7 @@
 			}
 			oA.onended=function(){
 				i++;
-				if (i>=4) {i=0}
+				if (i>=2) {i=0}
 				oA.src='music/a'+i+'.mp3';
 
 				oA.play();
