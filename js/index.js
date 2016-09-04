@@ -66,6 +66,7 @@ $(function(){
 		$gototop_on_arrow = $('#gototop_on>.arrow'),
 		$tv_ps = $('.tv_ps'),
 		$control_view = $('.control_view');
+		$play=$('.playmusic');
 
 
 	// 电视垂直居中
@@ -120,7 +121,7 @@ $(function(){
 			$tap_4.addClass('tap_4_move');
 		},200);
 	}
-
+     
 	// 点击时去掉所有的动画
 	function tvContChange(){
 		$my_skill.hide();

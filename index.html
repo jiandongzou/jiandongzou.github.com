@@ -4,13 +4,18 @@
 	<meta charset="UTF-8">
 	<title>找工作ing。。。。。</title>
 	<link rel="shortcut icon" href="images/favicon.ico" /> 
+	
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	
    <link rel="stylesheet" href="css/style.css">
    <script src="js/move2.js"></script>
    <script>
-    
+   window.onload=function(){
+
+        var oA=document.querySelector('audio');
+		var oBtn=document.querySelector('.playmusic');
+		var isPlay=false;
         var browser=navigator.appName 
         var b_version=navigator.appVersion 
         var version=b_version.split(";"); 
@@ -31,12 +36,37 @@
         { 
         alert('此网站暂不支持低版本浏览器，建议使用IE10以上版本或Firefox、Chrome等高级浏览器浏览!'); 
         } 
-   
+        var i=0;
+        
+		oBtn.onclick=function(){
+			if(isPlay){
+				oA.pause();
+			
+				oBtn.style.background='#fff';
+				isPlay=false;
+			}else{
+				oBtn.style.background='#ec6b46';
+				oA.play();
+				
+				isPlay=true;
+			}
+			oA.onended=function(){
+				i++;
+				if (i>=4) {i=0}
+				oA.src='music/a'+i+'.mp3';
 
+				oA.play();
+		};
+
+		};
+
+
+   }
   </script>
 
 </head>
 <body>
+   
 	<!-- 首页的各种资料 -->
 	<div class="wrapper">
 		<div class="container">
@@ -111,7 +141,7 @@
 							<div class="my_intern_cont">
 								<h3 class="my_intern_title">前端实习经验</h3>
 							<h4 class="my_intern_comp">杭州微洽科技有限公司-前端开发</h4>
-							<!--<span class="my_intern_time">2014.8-2016.07</span>-->
+							<span class="my_intern_time"></span>
 							<ul>
 							     <li class="my_intern_item">与项目经理及其他项目组人员主动沟通，了解明确项目需求，以求切实达到产品需求。</li>
 								<li class="my_intern_item">负责平台首页页面等从设计稿到静态页面的转换，实现页面交互特效。</li>
@@ -200,7 +230,7 @@
 					<div class="flash_4"></div>
 				</div>
 				<div class="contact">
-					<h3>联系我</h3>
+					<h3 class="playmusic" style="cursor:pointer;">音乐模式<audio src="music/a0.mp3" ></audio></h3>
 					<ul class="contact_info">
 						<li class="contact_box">
 							<i class="contact_qq"></i>
@@ -214,7 +244,7 @@
 				</div>
 				<div class="works">更多作品展示</div>
 			</div>
-			<a class="my_download" href="file/邹建东-两年工作经验应聘前端简历.doc" target="_blank" download="邹建东-两年工作经验应聘前端简历.doc">
+			<a class="my_download" href="file/邹建东-应聘前端简历.doc" target="_blank" download="邹建东-应聘前端简历.doc">
 				<i></i>
 				<span>下载纸质版简历</span>
 			</a>
@@ -492,6 +522,9 @@
 
 <script src="js/jquery2.1.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+
+
+
 <script src="js/index.js"></script>
 
 
